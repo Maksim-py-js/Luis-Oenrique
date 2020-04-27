@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+header {
+  width: 100vw;
+  height: 750px;
+  background: url("images/header.png") no-repeat 100% 125%, url("images/header_bg.png") no-repeat 50% 50%/cover; }
+  header .top-bar {
+    padding-bottom: 85px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 30px; }
+    header .top-bar .logo {
+      text-align: center; }
+      header .top-bar .logo .name {
+        font-family: "Lato";
+        font-weight: lighter;
+        font-size: 14.15px;
+        color: #000;
+        text-transform: uppercase; }
+      header .top-bar .logo .position {
+        font-family: "Lato";
+        font-size: 8px;
+        color: #000;
+        text-transform: uppercase; }
+    header .top-bar nav ul {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex; }
+      header .top-bar nav ul li {
+        margin-right: 40px; }
+        header .top-bar nav ul li a {
+          font-family: "Asap";
+          font-size: 16px;
+          color: #4d4d4d;
+          text-transform: uppercase;
+          padding-bottom: 8px;
+          border-bottom: 2px solid transparent; }
+          header .top-bar nav ul li a:hover {
+            padding-bottom: 8px;
+            border-bottom: 2px solid #878787;
+            transition: .3s; }
+  header .main-bar {
+    padding-top: 85px;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto; }
+    header .main-bar .name-person {
+      font-family: "Asap";
+      font-weight: medium;
+      font-size: 90px;
+      color: #4d4d4d; }
+    header .main-bar .about-person {
+      font-family: "Asap";
+      font-weight: medium;
+      font-size: 22px;
+      color: #4d4d4d; }
+    header .main-bar .buttons {
+      margin-top: 30px; }
+      header .main-bar .buttons button {
+        background: transparent;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #4d4d4d;
+        font-family: "Asap";
+        font-weight: medium;
+        font-size: 16px;
+        color: #4d4d4d;
+        text-transform: uppercase;
+        padding: 18px 47px;
+        margin-right: 20px; }
+        header .main-bar .buttons button:hover {
+          background: #fff;
+          border: 1px solid #fff;
+          box-shadow: 0px 10px 15px 8px #cacaca; }
