@@ -38,7 +38,7 @@
 	padding: 18px 48px;
 	border: 1px solid #4d4d4d;
 	margin-right: 20px;
-	margin-top: 20px;
+	margin-bottom: 20px;
 
 	font-family: "Asap";
 	font-weight: medium;
@@ -103,7 +103,7 @@ a {
 	text-decoration: none;
 }
 header {
-	height: 750px;
+	min-height: 750px;
 	background: url('images/header.png') no-repeat 100% 125%,
 	url('images/header_bg.png') no-repeat 50% 50%/cover;
 	.top-bar {
@@ -136,6 +136,7 @@ header {
 				margin-right: 40px;
 				li {
 					margin-left: 40px;
+					margin-bottom: 20px;
 					a {
 						font-family: "Asap";
 						font-size: 16px;
@@ -167,7 +168,7 @@ header {
 			font-weight: medium;
 			font-size: 22px;
 			color: #4d4d4d;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -175,6 +176,7 @@ main {
 	margin-bottom: 154px;
 	.about-person {
 		@include flex;
+		flex-wrap: wrap;
 		@include center;
 		align-items: center;
 		margin-top: 110px;
@@ -192,9 +194,13 @@ main {
 			}
 		}
 		.image {
+			max-width: 570px;
+			width: 100%;
+			height: 100%;
+			max-height: 440px;
 			img {
-				height: 440px;
-				width: 570px;
+				height: 100%;
+				width: 100%;
 				object-fit: cover;
 				object-position: 50% 50%; 
 			}
@@ -221,7 +227,7 @@ main {
 			flex-wrap: wrap;
 			.service-card {
 				width: 33%;
-					margin-top: 60px;	
+				margin-top: 60px;	
 				.designation {
 					font-family: "Asap";
 					font-weight: bold;
@@ -257,7 +263,6 @@ main {
 				margin-top: 15px;
 				margin-bottom: 15px;
 				width: 31.45299145%;
-				// width: 368px;
 				height: 318px;
 				&:hover {
 					box-shadow: 0px 10px 15px 8px #cacaca;
@@ -282,7 +287,7 @@ main {
 			max-width: 953px;
 			margin: 50px auto 0 auto;
 			ul.slick-dots {
-				width: 700px;
+				width: 100%;
 				margin: 0 auto;
 			}
 			.slick-dots li button:before {
@@ -487,6 +492,113 @@ footer {
 			&:hover {
 				background:transparent url('images/icons/dr_h.png') no-repeat 50% 50%;
 			}
+		}
+	}
+}
+@media screen and (max-width: 360px) {
+	header {
+		background: url('images/header.png') no-repeat 70% 125%,
+		url('images/header_bg.png') no-repeat 50% 50%/cover;
+		text-align: center;
+		.top-bar {
+			flex-wrap: wrap;
+			.logo {
+				margin: 0 auto;
+				margin-bottom: 30px;
+			}
+			.menu {
+				ul {
+					justify-content: space-around;
+				}
+			}
+		}
+		.main-bar {
+			.name-person {
+				font-size: 70px;
+			}
+		}
+	}
+	main {
+		.about-person {
+			text-align: center;
+			.image {
+				margin-top: 20px;
+			}
+			.main-name-block {
+				&:before {
+					margin: 0 auto 20px auto;
+				}
+			}
+			.some-information {
+				.text-block {
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+		.services {
+			.service-cards {
+				flex-wrap: wrap;
+				.service-card {
+					width: 100%;
+				}
+			}
+		}
+		.portfolio {
+			.main-name-block {
+				margin-bottom: 25px;
+			}
+			.portfolio-cards {
+				.portfolio-card {
+					width: 100%;
+				}
+			}
+		}
+		.testimonials {
+			.testimonialsSlider {
+				padding: 0 0 0 0;
+				.slide-card {
+					padding-top: 20px;
+					outline: none;
+					@include flex;
+					flex-wrap: wrap;
+					.image {
+						margin: 0 auto;
+					}
+					.some-information {
+						text-align: center;
+						padding-bottom: 80px;
+					}
+				}
+			}
+		}
+		.communications {
+			.cards {
+				.card {
+					width: 100%;
+				}
+			}
+		}
+	}
+	footer {
+		form {
+			margin-top: 55px;
+			.input {
+				flex-wrap: wrap;
+				input {
+					width: 100%;
+					margin-bottom: 15px;
+					margin-top: 15px;
+				}
+			}
+			textarea {
+				margin-top: 15px;
+			}
+		}
+		.social {
+			@include flex;
+			justify-content: center;
+			margin: 26px auto 0 auto;
 		}
 	}
 }

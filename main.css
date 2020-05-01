@@ -27,7 +27,7 @@
   padding: 18px 48px;
   border: 1px solid #4d4d4d;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: "Asap";
   font-weight: medium;
   font-size: 16px;
@@ -83,7 +83,7 @@ a {
   text-decoration: none; }
 
 header {
-  height: 750px;
+  min-height: 750px;
   background: url("images/header.png") no-repeat 100% 125%, url("images/header_bg.png") no-repeat 50% 50%/cover; }
   header .top-bar {
     padding-bottom: 85px;
@@ -120,7 +120,8 @@ header {
       text-align: center;
       margin-right: 40px; }
       header .top-bar .menu ul li {
-        margin-left: 40px; }
+        margin-left: 40px;
+        margin-bottom: 20px; }
         header .top-bar .menu ul li a {
           font-family: "Asap";
           font-size: 16px;
@@ -147,7 +148,7 @@ header {
       font-weight: medium;
       font-size: 22px;
       color: #4d4d4d;
-      margin-bottom: 10px; }
+      margin-bottom: 30px; }
 
 main {
   margin-bottom: 154px; }
@@ -157,6 +158,7 @@ main {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
@@ -173,11 +175,16 @@ main {
         line-height: 25px;
         margin-bottom: 20px;
         margin-right: 30px; }
-    main .about-person .image img {
-      height: 440px;
-      width: 570px;
-      object-fit: cover;
-      object-position: 50% 50%; }
+    main .about-person .image {
+      max-width: 570px;
+      width: 100%;
+      height: 100%;
+      max-height: 440px; }
+      main .about-person .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%; }
   main .services .main-name-block,
   main .skills .main-name-block,
   main .portfolio .main-name-block,
@@ -262,7 +269,7 @@ main {
       max-width: 953px;
       margin: 50px auto 0 auto; }
       main .testimonials .testimonialsSlider ul.slick-dots {
-        width: 700px;
+        width: 100%;
         margin: 0 auto; }
       main .testimonials .testimonialsSlider .slick-dots li button:before {
         margin-top: 35px;
@@ -455,3 +462,70 @@ footer {
       background: transparent url("images/icons/dr.png") no-repeat 50% 50%; }
       footer .social .dribble:hover {
         background: transparent url("images/icons/dr_h.png") no-repeat 50% 50%; }
+
+@media screen and (max-width: 360px) {
+  header {
+    background: url("images/header.png") no-repeat 70% 125%, url("images/header_bg.png") no-repeat 50% 50%/cover;
+    text-align: center; }
+    header .top-bar {
+      flex-wrap: wrap; }
+      header .top-bar .logo {
+        margin: 0 auto;
+        margin-bottom: 30px; }
+      header .top-bar .menu ul {
+        justify-content: space-around; }
+    header .main-bar .name-person {
+      font-size: 70px; }
+  main .about-person {
+    text-align: center; }
+    main .about-person .image {
+      margin-top: 20px; }
+    main .about-person .main-name-block:before {
+      margin: 0 auto 20px auto; }
+    main .about-person .some-information .text-block {
+      margin-left: 10px;
+      margin-right: 10px; }
+  main .services .service-cards {
+    flex-wrap: wrap; }
+    main .services .service-cards .service-card {
+      width: 100%; }
+  main .portfolio .main-name-block {
+    margin-bottom: 25px; }
+  main .portfolio .portfolio-cards .portfolio-card {
+    width: 100%; }
+  main .testimonials .testimonialsSlider {
+    padding: 0 0 0 0; }
+    main .testimonials .testimonialsSlider .slide-card {
+      padding-top: 20px;
+      outline: none;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-wrap: wrap; }
+      main .testimonials .testimonialsSlider .slide-card .image {
+        margin: 0 auto; }
+      main .testimonials .testimonialsSlider .slide-card .some-information {
+        text-align: center;
+        padding-bottom: 80px; }
+  main .communications .cards .card {
+    width: 100%; }
+  footer form {
+    margin-top: 55px; }
+    footer form .input {
+      flex-wrap: wrap; }
+      footer form .input input {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-top: 15px; }
+    footer form textarea {
+      margin-top: 15px; }
+  footer .social {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    margin: 26px auto 0 auto; } }
